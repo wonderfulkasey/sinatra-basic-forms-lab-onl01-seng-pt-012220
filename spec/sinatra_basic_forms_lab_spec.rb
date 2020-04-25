@@ -72,11 +72,11 @@ describe App do
 
       fill_in(:name, :with => "Byron")
       fill_in(:breed, :with => "Poodle")
-      fill_in(:age, :with => "6")
+      fill_in(:age, :with => "9")
 
       #the below css will match any element (input or button)
       #with a type attribute set to submit
-      page.find(:css, '[type=submit]').click
+    page.find(:css, '[type=submit]').click
 
       expect(page).to have_text(/Name:\s+Byron/i)
       expect(page).to have_text(/Breed:\s+Poodle/i)
